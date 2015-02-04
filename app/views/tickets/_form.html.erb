@@ -1,0 +1,64 @@
+<%= form_for([@card, @card.tickets.build]) do |f| %>
+
+
+  <div class="control-group">
+     
+    <%= f.label :concept, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :concept, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :amount, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :amount, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :entsal, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :entsal, options_for_select([["Entrada", "Entrada"], ["Salida", "Salida"]]) %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :comment, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :comment, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+  </div>
+<% end %>
+
+
+
+<!-- 
+
+
+<%= form_for([@card, @card.tickets.build]) do |f| %>
+<p>
+  <%= f.label :concept %><br>
+  <%= f.text_field :concept %>
+</p>
+
+<p>
+  <%= f.label :amount %><br>
+  <%= f.text_field :amount %>
+</p>
+
+<p>
+  <%= f.label :comment %><br>
+  <%= f.text_area :comment %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>
+
+-->

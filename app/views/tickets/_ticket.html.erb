@@ -1,0 +1,17 @@
+<%- model_class = Ticket -%>
+
+<tbody>
+    <tr>
+      	<td><%= ticket.id %></td>
+        <td><%= ticket.concept %></td>
+        <td><%= ticket.amount %></td>
+        <td><%= ticket.comment %></td>
+        <td><%= ticket.entsal %></td>
+        <td><%= ticket.created_at %></td>       
+        
+        <td>
+        	<dd><%= link_to 'Destroy',[ticket.card, ticket], method: :delete, data:{ confirm: 'Are you sure?'} %><dd> 
+        </td>
+      </tr>
+  </tbody>
+
